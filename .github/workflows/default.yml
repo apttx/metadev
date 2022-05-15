@@ -11,6 +11,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
+      - name: node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - name: install
         run: npm ci
 
@@ -21,7 +26,7 @@ jobs:
         run: npm npm build
 
       - name: pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: pages
-          folder: build/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
