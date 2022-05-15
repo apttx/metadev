@@ -1,0 +1,27 @@
+name: Build & Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: install
+        run: npm ci
+
+      - name: lint
+        run: npm run lint
+
+      - name: build
+        run: npm npm build
+
+      - name: pages
+        uses: JamesIves/github-pages-deploy-action@4.3.3
+        with:
+          branch: pages
+          folder: build/
