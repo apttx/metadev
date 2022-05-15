@@ -6,7 +6,6 @@
   import Annotation from '$lib/components/heroicons/Annotation.svelte'
   import Share from '$lib/components/heroicons/Share.svelte'
   import LabeledTile from '$lib/components/LabeledTile.svelte'
-  import { onMount } from 'svelte'
   import TextValue from '$lib/components/TextValue.svelte'
   import Language from '$lib/components/Language.svelte'
   import ExternalLink from '$lib/components/heroicons/ExternalLink.svelte'
