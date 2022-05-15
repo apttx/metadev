@@ -11,6 +11,9 @@ const config = {
       default: true,
       entries: ['/'],
     },
+    paths: {
+      assets: 'https://apttx.github.io/metadev',
+    },
   },
   preprocess: sveltePreprocess({
     postcss: {
