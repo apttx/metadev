@@ -5,7 +5,7 @@ on:
       - default
 
 jobs:
-  build-and-deploy:
+  default:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
