@@ -13,6 +13,7 @@
   import Language from '$lib/components/Language.svelte'
   import ExternalLink from '$lib/components/heroicons/ExternalLink.svelte'
   import InlineCode from '$lib/components/InlineCode.svelte'
+  import Suggestion from '$lib/components/Suggestion.svelte'
 
   const initialData = () => ({ html: {}, og: {} })
 
@@ -242,7 +243,13 @@
           <InlineCode>prefix</InlineCode>
           attribute for
           <InlineCode>og</InlineCode>
-          namespace even though it has meta information using it
+          namespace even though it has meta information using it.
+
+          <Suggestion>
+            Add a
+            <InlineCode>prefix="og: https://ogp.me/ns#"</InlineCode>
+            attribute to your <InlineCode>html</InlineCode> tag.
+          </Suggestion>
         </svelte:fragment>
       </TextValue>
     </LabeledTile>
