@@ -159,7 +159,7 @@
       <span>Basic metadata</span>
     </h2>
 
-    <LabeledTile label="favicon" danger={data.favicons === null}>
+    <LabeledTile label="favicon" danger={data.favicons?.length === 0}>
       {#if data.favicons}
         <ul class="grid grid-flow-col gap-4 justify-start items-end">
           {#each data.favicons as favicon}
