@@ -50,21 +50,22 @@
       return `${url.origin}${path}`
     }
 
+    const splitPathname = url.pathname.split('/')
+    const pathSegments = splitPathname.slice(1, splitPathname.length - 1)
+
     if (path.startsWith('..')) {
       const matches = path.match(/(\.\.\/)/g)
       const stepsBack = matches.length
-
-      const [, ...pathSegments] = url.pathname.split('/')
       const resolvedSegments = pathSegments.slice(
         0,
-        pathSegments.length - stepsBack - 1
+        pathSegments.length - stepsBack
       )
       const pathFromResolved = path.replace(/^(\.\.\/)+/, '')
 
       return `${url.origin}/${resolvedSegments.join('/')}/${pathFromResolved}`
     }
 
-    return `${url.href}${path.replace(/^\./, '')}`
+    return `${url.origin}/${pathSegments.join('/')}${path.replace(/^\./, '')}`
   }
 
   const getMeta = async () => {
