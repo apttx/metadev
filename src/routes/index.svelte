@@ -1,5 +1,8 @@
 <script>
+  import { onMount } from 'svelte'
   import { parse } from 'parse5'
+
+  import { page } from '$app/stores'
 
   import Refresh from '$lib/components/heroicons/Refresh.svelte'
   import Globe from '$lib/components/heroicons/Globe.svelte'
@@ -94,9 +97,11 @@
     loading = false
   }
 
-  let uri
+  let uri = $page.url.href
   let checkeredImages = false
   let borderedImages = false
+
+  onMount(getMeta)
 </script>
 
 <main class="relative items-start p-4 space-y-12 pb-64">
