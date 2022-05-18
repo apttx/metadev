@@ -9,12 +9,10 @@
 
 <div class="relative">
   <span
-    class="inline-flex items-center transition border-primary border-2 rounded-md text-primary bg-primer px-1 font-bold text-sm mb-2 space-x-1"
-    class:text-primer={warn || danger}
-    class:border-warn={warn}
-    class:bg-warn={warn}
-    class:border-danger={danger}
-    class:bg-danger={danger}
+    class="inline-flex items-center transition border-primary border-2 rounded-md text-primary px-1 font-bold text-sm mb-2 space-x-1
+      dark:text-primer dark:bg-primary dark:border-primary"
+    class:warn
+    class:danger
   >
     <span class="inline-block">
       {label}
@@ -31,3 +29,13 @@
 
   <slot />
 </div>
+
+<style lang="postcss">
+  .warn {
+    @apply bg-warn border-warn text-primer;
+  }
+
+  .danger {
+    @apply bg-danger border-danger text-primer;
+  }
+</style>
