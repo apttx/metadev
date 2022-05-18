@@ -127,7 +127,7 @@
     loading = false
   }
 
-  let uri = $page.url.href
+  let uri = import.meta.env.VITE_INITIAL_URL || $page.url.href
   let checkeredImages = false
   let borderedImages = false
 
