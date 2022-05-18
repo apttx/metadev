@@ -5,10 +5,12 @@
 </script>
 
 <script>
+  import InlineCode from '$lib/components/InlineCode.svelte'
+
   export let language
 </script>
 
 {languageDisplayName.of(language)}
-<span class="font-mono bg-confident/10 px-2 py-1 rounded-md text-sm">
+<InlineCode>
   {language}
-</span>
+</InlineCode>
