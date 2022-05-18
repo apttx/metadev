@@ -15,7 +15,7 @@ jobs:
         run: npm ci
 
       - name: build
-        run: npm run build
+        run: ASSET_PATH=https://apttx.github.io/metadev npm run build
 
       - name: pages
         uses: peaceiris/actions-gh-pages@v3
