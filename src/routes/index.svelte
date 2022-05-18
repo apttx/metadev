@@ -73,7 +73,7 @@
     data = initialData()
 
     try {
-      const parsedUrl = new URL(uri)
+      const parsedUrl = new URL(url)
 
       const response = await fetch(parsedUrl, { mode: 'cors' })
 
@@ -127,7 +127,7 @@
     loading = false
   }
 
-  let uri = import.meta.env.VITE_INITIAL_URL || $page.url.href
+  let url = import.meta.env.VITE_INITIAL_URL || $page.url.href
   let checkeredImages = false
   let borderedImages = false
 
@@ -144,10 +144,10 @@
       <label
         class="grid grid-cols-[auto_1fr] items-center border-2 rounded-sm transition"
       >
-        <span class="text-sm font-bold px-3 py-1">URI</span>
+        <span class="text-sm font-bold px-3 py-1">URL</span>
         <input
           class="px-3 py-1 text-confident"
-          bind:value={uri}
+          bind:value={url}
           on:input={getMeta}
         />
       </label>
