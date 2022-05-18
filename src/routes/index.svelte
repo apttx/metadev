@@ -106,6 +106,7 @@
 </script>
 
 <main class="relative items-start p-4 space-y-12 pb-64">
+  <!-- header -->
   <div
     class="sticky top-4 max-w-3xl mx-auto z-50 px-4 py-3 space-y-2 bg-primer shadow-lg rounded-md
       dark:bg-primary"
