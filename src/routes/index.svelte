@@ -203,8 +203,9 @@
         <Language language={data.html.lang} />
       </TextValue>
     </LabeledTile>
-    {#if data.alternates}
-      <LabeledTile label="alternate">
+
+    <LabeledTile label="alternate">
+      {#if data.alternates?.length}
         <ul class="space-y-4">
           {#each data.alternates as alternate}
             <li>
@@ -221,8 +222,10 @@
             </li>
           {/each}
         </ul>
-      </LabeledTile>
-    {/if}
+      {:else}
+        <p class="italic">No other languages are linked</p>
+      {/if}
+    </LabeledTile>
   </section>
 
   <!-- Open Graph protocol -->
