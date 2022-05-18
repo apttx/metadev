@@ -9,7 +9,7 @@ module.exports = {
       secondary: '#6495ED',
       primer: '#ffffff',
       confident: '#374048',
-      good: '#2E8B57',
+      good: '#3CB371',
       warn: '#FFA500',
       danger: '#DC143C',
     },
