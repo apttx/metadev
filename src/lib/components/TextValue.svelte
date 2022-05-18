@@ -10,7 +10,6 @@
   class={className}
   class:block={!value}
   class:italic={!value}
-  class:text-confident={!value}
   class:font-normal={!value}
   class:bg-confident={isUndefined}
   class:animate-pulse={isUndefined}
