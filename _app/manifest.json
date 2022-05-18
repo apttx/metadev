@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-8b1abebd.js",
+    "file": "start-931ad3aa.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-27f1cbba.js"
+      "_index-de1613b8.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -13,15 +13,15 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-9306ead7.js",
+    "file": "pages/__layout.svelte-8b1a6373.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-27f1cbba.js"
+      "_index-de1613b8.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-ee5a37ec.css"
+      "assets/pages/__layout.svelte-972a6ee1.css"
     ],
     "assets": [
       "assets/manrope-all-400-normal-43773192.woff",
@@ -44,27 +44,30 @@
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-322a5640.js",
+    "file": "error.svelte-b5a20d31.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-27f1cbba.js"
+      "_index-de1613b8.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-224303d4.js",
+    "file": "pages/index.svelte-ce90f646.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-27f1cbba.js"
+      "_index-de1613b8.js"
     ],
     "css": [
-      "assets/pages/index.svelte-0678d438.css"
+      "assets/pages/index.svelte-79565a30.css"
+    ],
+    "assets": [
+      "assets/checkers-505a4141.svg"
     ]
   },
-  "_index-27f1cbba.js": {
-    "file": "chunks/index-27f1cbba.js"
+  "_index-de1613b8.js": {
+    "file": "chunks/index-de1613b8.js"
   }
 }
