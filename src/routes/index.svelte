@@ -117,11 +117,11 @@
   >
     <div class="grid grid-cols-[1fr_auto] gap-4">
       <label
-        class="grid grid-cols-[auto_1fr] gap-2 items-center border-2 rounded-sm transition pl-3"
+        class="grid grid-cols-[auto_1fr] items-center border-2 rounded-sm transition"
       >
-        <span class="text-sm font-bold">URI</span>
+        <span class="text-sm font-bold px-3 py-1">URI</span>
         <input
-          class="py-1 pl-1 pr-3 text-confident"
+          class="px-3 py-1 text-confident"
           bind:value={uri}
           on:input={getMeta}
         />
