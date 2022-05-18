@@ -41,6 +41,32 @@
   let loading = false
   let error
 
+  const resolvePath = (url, path) => {
+    if (path.startsWith('http')) {
+      return path
+    }
+
+    if (path.startsWith('/')) {
+      return `${url.origin}${path}`
+    }
+
+    if (path.startsWith('..')) {
+      const matches = path.match(/(\.\.\/)/g)
+      const stepsBack = matches.length
+
+      const [, ...pathSegments] = url.pathname.split('/')
+      const resolvedSegments = pathSegments.slice(
+        0,
+        pathSegments.length - stepsBack - 1
+      )
+      const pathFromResolved = path.replace(/^(\.\.\/)+/, '')
+
+      return `${url.origin}/${resolvedSegments.join('/')}/${pathFromResolved}`
+    }
+
+    return `${url.href}${path.replace(/^\./, '')}`
+  }
+
   const getMeta = async () => {
     loading = true
     error = null
@@ -80,9 +106,8 @@
       data.description = findMetaContent('description')
 
       data.favicons = findLinks('icon').map(iconLink => {
-        const absoluteHref = iconLink.href.startsWith('http')
-          ? iconLink.href
-          : `${parsedUrl.origin}${iconLink.href}`
+        const absoluteHref = resolvePath(parsedUrl, iconLink.href)
+
         return { ...iconLink, href: absoluteHref }
       })
 
