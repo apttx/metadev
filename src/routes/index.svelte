@@ -112,19 +112,16 @@
 <main class="relative items-start p-4 space-y-12 pb-64">
   <!-- header -->
   <div
-    class="sticky top-4 max-w-3xl mx-auto z-50 px-4 py-3 space-y-2 bg-primer shadow-lg rounded-md
-      dark:bg-primary"
+    class="transition sticky top-4 max-w-3xl mx-auto z-50 px-4 py-3 space-y-2 shadow-lg rounded-md bg-primary text-primer"
+    class:bg-danger={error}
   >
     <div class="grid grid-cols-[1fr_auto] gap-4">
       <label
         class="grid grid-cols-[auto_1fr] gap-2 items-center border-2 rounded-sm transition pl-3"
-        class:border-danger={error}
-        class:border-secondary={loading}
       >
         <span class="text-sm font-bold">URI</span>
         <input
-          class="py-1 pl-1 pr-3
-            dark:text-confident"
+          class="py-1 pl-1 pr-3 text-confident"
           bind:value={uri}
           on:input={getMeta}
         />
@@ -140,7 +137,7 @@
     </div>
 
     {#if error}
-      <p class="text-danger col-span-2">
+      <p>
         {error.message}
       </p>
     {/if}
