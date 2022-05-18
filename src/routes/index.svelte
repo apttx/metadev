@@ -59,7 +59,11 @@
       data.html.prefix = Object.fromEntries(
         html.attrs
           .filter(({ name }) => name === 'prefix')
-          .map(({ name, value }) => [name, value])
+          .map(({ value }) => {
+            const [prefix, url] = value.split(/:\s*(.+)/)
+
+            return [prefix.trim(), url.trim()]
+          })
       )
 
       const head = html.childNodes.find(({ tagName }) => tagName === 'head')
