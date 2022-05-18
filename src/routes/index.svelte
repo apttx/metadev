@@ -277,7 +277,7 @@
 
 <style>
   .checkered {
-    background-image: url('/assets/checkers.svg');
+    background-image: url('$lib/assets/checkers.svg');
     background-size: 10%;
   }
 </style>
