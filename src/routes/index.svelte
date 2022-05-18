@@ -9,6 +9,7 @@
   import TextValue from '$lib/components/TextValue.svelte'
   import Language from '$lib/components/Language.svelte'
   import ExternalLink from '$lib/components/heroicons/ExternalLink.svelte'
+  import InlineCode from '$lib/components/InlineCode.svelte'
 
   const initialData = () => ({ html: {}, og: {} })
 
@@ -224,13 +225,9 @@
       <TextValue value={data.html.prefix?.og}>
         <svelte:fragment slot="no-value">
           HTML tag is missing
-          <span class="font-mono bg-confident/10 px-2 py-1 rounded-md text-sm">
-            prefix
-          </span>
+          <InlineCode>prefix</InlineCode>
           attribute for
-          <span class="font-mono bg-confident/10 px-2 py-1 rounded-md text-sm">
-            og
-          </span>
+          <InlineCode>og</InlineCode>
           namespace even though it has meta information using it
         </svelte:fragment>
       </TextValue>
