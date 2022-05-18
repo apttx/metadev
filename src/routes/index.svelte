@@ -106,7 +106,8 @@
 
 <main class="relative items-start p-4 space-y-12 pb-64">
   <div
-    class="sticky top-4 max-w-3xl mx-auto z-50 px-4 py-3 space-y-2 bg-primer shadow-lg rounded-md"
+    class="sticky top-4 max-w-3xl mx-auto z-50 px-4 py-3 space-y-2 bg-primer shadow-lg rounded-md
+      dark:bg-primary"
   >
     <div class="grid grid-cols-[1fr_auto] gap-4">
       <label
@@ -115,7 +116,12 @@
         class:border-secondary={loading}
       >
         <span class="text-sm font-bold">URI</span>
-        <input class="py-1 pl-1 pr-3" bind:value={uri} on:input={getMeta} />
+        <input
+          class="py-1 pl-1 pr-3
+            dark:text-confident"
+          bind:value={uri}
+          on:input={getMeta}
+        />
       </label>
       <button
         class="transition"
