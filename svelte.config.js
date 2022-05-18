@@ -12,7 +12,7 @@ const config = {
       entries: ['/'],
     },
     paths: {
-      assets: 'https://apttx.github.io/metadev',
+      assets: process.env.ASSET_PATH,
     },
   },
   preprocess: sveltePreprocess({
